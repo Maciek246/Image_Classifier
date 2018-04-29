@@ -1,0 +1,1 @@
+python -m tensorflow-for-poets-2.scripts.label_image --graph="tensorflow-for-poets-2\tf_files\retrained_graph.pb" --image=$1 --labels="tensorflow-for-poets-2\tf_files\retrained_labels.txt"
