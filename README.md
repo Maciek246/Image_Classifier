@@ -17,7 +17,14 @@ https://codelabs.developers.google.com/codelabs/tensorflow-for-poets
 </a>
 </div>
 
-## How to run it
+## Simple run
+    
+    git clone https://github.com/Maciek246/Image_Classifier
+    classification_windows <path to image> //for windows
+    classification_linux.sh <path to image> //for Linux
+    
+
+## How to build
 
 ### 1. Create Virtual Environment
 
