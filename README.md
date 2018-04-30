@@ -35,7 +35,7 @@ https://codelabs.developers.google.com/codelabs/tensorflow-for-poets
 	
 **Linux:**
 	
-		python3 -m venv myvenv
+		python3 -m venv tensorenv
 	
 	
 ### 2. Enable Virtual Environment
@@ -79,6 +79,7 @@ That should look like this:
 	│   ├── decor.zip
 	│   └── DecorColorImages.h5
     ├── requirements.txt
+    ├── tensorenv
 	
 ### 6. Paste and run script ("prepare_data.py") which prepare data for alghoritm or you can do it manually (if you have too many time :D )
 	
@@ -93,6 +94,13 @@ That should look like this:
 	│   ├── scripts
 	│   ├── tf_files
 	│   │   └── decor
+    │   │       ├── Gorodets
+    │   │       ├── Gzhel
+    │   │       ├── Iznik
+    │   │       ├── Khokhloma
+    │   │       ├── Neglyubka
+    │   │       ├── Wycinanki lowickie
+    │   │       └── Wzory kaszubskie
 	│   ├── .gitignore
 	│   ├── CONTRIBUTING.md
 	│   ├── LICENSE
@@ -103,6 +111,8 @@ That should look like this:
 	│   ├── decor.zip
 	│   └── DecorColorImages.h5
 	├── prepare_data.py
+    ├── requirements.txt
+    ├── tensorenv
 
 ### 7. Set environment variables
 
@@ -121,7 +131,7 @@ That should look like this:
 **Windows:**
 
 	cd tensorflow-for-poets-2
-	python -m scripts.retrain --bottleneck_dir=tf_files/bottlenecks --how_many_training_steps=500 --model_dir=tf_files\models --summaries_dir=tf_files\training_summaries\%ARCHITECTURE% --output_graph=tf_files\retrained_graph.pb --output_labels=tf_files\retrained_labels.txt --architecture=%ARCHITECTURE% --image_dir=tf_files\decor
+	python -m scripts.retrain --bottleneck_dir=tf_files\bottlenecks --how_many_training_steps=500 --model_dir=tf_files\models --summaries_dir=tf_files\training_summaries\%ARCHITECTURE% --output_graph=tf_files\retrained_graph.pb --output_labels=tf_files\retrained_labels.txt --architecture=%ARCHITECTURE% --image_dir=tf_files\decor
 **Linux:**
 
     cd tensorflow-for-poets-2 
@@ -144,11 +154,11 @@ RUN:
 	
 RESULT:	
 	
-	Evaluation time (1-image): 0.261s
-	
-	wzory kaszubskie 0.9939978
-	wycinanki lowickie 0.0035613931
-	gorodets 0.0023427997
-	iznik 7.733403e-05
-	gzhel 1.7852544e-05
+	Evaluation time (1-image): 0.264s
+
+    wzory kaszubskie 0.98110276
+    wycinanki lowickie 0.010729458
+    gorodets 0.007960089
+    iznik 0.00016123714
+    gzhel 2.6316095e-0
 	
